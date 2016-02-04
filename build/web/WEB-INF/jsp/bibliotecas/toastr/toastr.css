@@ -1,0 +1,29 @@
+.info{
+    background-color: #0277bd;
+    color: white;
+    opacity: 1;
+    line-height: inherit;
+}
+
+.erro{
+    background-color: #b71c1c;
+    color: white;
+    opacity: 1;
+    line-height: inherit;
+}
+
+.alerta{
+    background-color: #ffd600;
+    color: black;
+    opacity: 1;
+    line-height: inherit;
+}
+
+.confirmacao{
+    background-color: #00c853;
+    color: black;
+    opacity: 1;
+    line-height: inherit;
+}
+
+

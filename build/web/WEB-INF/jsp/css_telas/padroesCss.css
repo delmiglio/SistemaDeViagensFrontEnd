@@ -1,0 +1,35 @@
+.icon-block {
+    padding: 0 15px;
+} 
+.icon-block .material-icons {
+    font-size: inherit;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+}
+img{
+    width: 500px;
+    height: 250px;
+}
+.card{
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-large waves-effect waves-light yellow accent-4{
+    margin-left:  auto;
+    margin-right:  auto;
+
+}
+
+#table-ajuste-icone-alterar{
+    margin-bottom: 30px;
+}
+
+#table-ajuste-icone-excluir{
+    margin-top: 25px;
+    margin-bottom: 3px;
+}

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+
+<!-- Xmls Obrigatórios Para o Funcionamento do SRPING , Não REMOVER -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"       
+       
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+    
+    <!-- Pasta das Controllers do Sistema -->
+    <context:component-scan base-package="br.com.bean.Controllers"/>
+    
+    <!-- Pasta dos Utiliarios do Sistema -->
+    <context:component-scan base-package="br.com.bean.Utilitarios"/>
+         
+     <!-- Pastas Com os Css do Projeto , Para Seguir o Desenvolvimento , Crie uma Pasta
+          Referente a tela e Insira os Css dentro dessa pasta-->
+    <mvc:resources mapping="/css_telas/**" location="/WEB-INF/jsp/css_telas/"/> 
+     
+    <!-- Pastas Com os Js do Projeto , Para Seguir o Desenvolvimento , Crie uma Pasta
+         Referente a tela e Insira os Js dentro dessa pasta-->
+    <mvc:resources mapping="/js_telas/**" location="/WEB-INF/jsp/js_telas/"/> 
+   
+     <!-- Pastas com Bibliotecas de Js e Css , Como o Materialize e o JQuery -->
+     <mvc:resources mapping="/bibliotecas/**" location="/WEB-INF/jsp/bibliotecas/"/> 
+     
+     <!-- Pasta com Imagens -->
+     <mvc:resources mapping="/Img/**" location="/WEB-INF/jsp/Img/"/>
+     
+     <!-- Pasta com Imagens das festas -->
+     <mvc:resources mapping="/Img_Festas/**" location="/WEB-INF/jsp/Img_Festas/"/>
+     
+      <!-- Pasta com Imagens das festas -->
+     <mvc:resources mapping="/Img_Viagens/**" location="/WEB-INF/jsp/Img_Viagens/"/>
+     
+     
+     
+     
+      <mvc:interceptors>
+            <bean class="br.com.bean.Utilitarios.LoginInterceptador" />
+      </mvc:interceptors>
+      
+    <mvc:annotation-driven />
+    <context:annotation-config />    
+    
+    
+    
+    
+    <!--bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+          p:location="/WEB-INF/jdbc.properties" />
+
+    <bean id="dataSource"
+    class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+    p:driverClassName="${jdbc.driverClassName}"
+    p:url="${jdbc.url}"
+    p:username="${jdbc.username}"
+    p:password="${jdbc.password}" /-->
+
+    <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->
+
+</beans>
